@@ -1,0 +1,59 @@
+<div class="wrapper">
+  <div class="header" *ngIf="isLogged">
+    <div class="row col-md-12 header-menu">
+      <div class="col-md-6 col-sm-12 tabViewHeader mobHeader">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-color cr-poniter" routerLink="/bbs-automation">home</mat-icon>
+          <span class="verticalBar"></span>
+          <a class="navbar-brand">Angular </a>
+          <span class="verticalBar"></span>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-color menuIcons"
+            [matMenuTriggerFor]="menu"><span  matTooltip="Menu">menu</span>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item routerLink="/dashboard" routerLinkActive="active">
+                <span>Dashboard</span>
+              </button>
+              <button mat-menu-item routerLink="/userlist" routerLinkActive="active">
+                <span>User Management</span>
+              </button>
+            </mat-menu>
+          </mat-icon>
+        </nav>
+      </div>
+      <div class="col-md-6 col-sm-12 tabViewHeader">
+        <nav class="navbar navbar-expand-md navbar-dark" id="userInfo">
+          <form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+          </form>&nbsp;
+          <div class="example-button-row">
+            <button mat-mini-fab class="userLog" [matMenuTriggerFor]="userInfo">
+              <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-color menuIcons">perm_identity</mat-icon>
+            </button>
+            <mat-menu #userInfo="matMenu">
+               <div class="user-details">
+                <div class="accountInfo">
+                  <button mat-mini-fab class="btnColor">
+                    <mat-icon aria-hidden="false" aria-label="User icon" class="icon-color userIcons">account_circle</mat-icon>
+                  </button>
+                  <div class="usernameCls">{{loggedUserName}}</div>
+                  <hr/>
+                  <div style="margin-top: 10px;">
+                    <button (click)="logout()" class="btn btn-priamry btn-sm logOutBtn">Sign Out</button>
+                  </div>
+                </div>
+              </div>
+            </mat-menu>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div style="min-height:500px;">
+      <div class="page-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  <div class="footer" *ngIf="isLogged"> All Rights Reserved</div>
+</div>

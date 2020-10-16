@@ -1,0 +1,11 @@
+* {
+    font-family: Lato;
+  }
+  
+  #chartdiv {
+    width: 100%;
+    height: 500px;
+  }
+  g[opacity="0.4"] {
+    display: none;
+  }

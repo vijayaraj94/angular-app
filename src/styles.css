@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+}
+.mat-card {
+    padding: 0 !important;
+    border: 1px solid #337ab7;
+}
+.mat-card-header {
+    background-color: #337ab7;
+}
+.mat-card-content {
+    padding: 20px;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+.mat-card-title {
+    color: #ffffff;
+    font-size: 16px !important;
+    font-weight: 300;
+    padding-top: 10px;
+    font-family: Soursesanspro-Regular !important;
+}
+.mat-menu-item.active, .mat-menu-item.active:hover {
+    background: #1367a4;
+    color: #fff;
+}
+.mat-menu-item.active mat-icon, .mat-menu-item.active mat-icon:hover{
+    color: #fff;
+}
+.menuIcons {
+    cursor: pointer;
+}
+
+.mat-form-field {
+    width: 100% !important;
+}
+.mat-select-panel {
+    margin-top: 35px;
+    min-width: calc(100% + 10px) !important;
+    margin-left: 15px !important;
+}
+@media only screen and (min-width: 620px) and (max-width: 768px) { 
+    .tabViewHeader {
+        max-width: 50% !important;
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 575px) { 
+    .mobHeader {
+        max-width: 65% !important;
+    }
+}
+@media only screen and (min-width: 575px) and (max-width: 620px) { 
+    .mobHeader {
+        max-width: 65% !important;
+    }
+}
